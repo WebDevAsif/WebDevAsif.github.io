@@ -2,6 +2,7 @@ import style from "./Hero.module.css";
 import getImageUrl from "../../utils";
 
 export default function Hero() {
+  const googleDriveResumeLink = "https://drive.google.com/file/d/1HUp-DMDRe7O8lxgCoLMJyOnUcrP2Dfkg/view?usp=drive_link";
   return (
     <div className={style.Hero} id="home">
       <div className={style.mainSection}>
@@ -39,7 +40,7 @@ export default function Hero() {
           </div>
           <div className={style.downlodBtn}>
             <button className={style.download}>
-              <a href="../assets/Md-Asif-Resume.pdf" download>
+              <a href={googleDriveResumeLink} target="_blank" rel="noopener noreferrer" download="Resume.pdf">
                 Download CV
               </a>
             </button>
