@@ -5,6 +5,12 @@ import getImageUrl from "../../utils";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const phoneNumber = "+918789787472";
+
+  const handleCallButtonClick = () => {
+    window.open(`tel:${phoneNumber}`);
+  };
+
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -44,7 +50,7 @@ export default function Navbar() {
               <a href="#contacts">Contacts</a>
             </li>
           </ul>
-          <button className={style.navbarContact}>
+          <button className={style.navbarContact} onClick={handleCallButtonClick}>
             <p>+918789787472</p>
           </button>
         </nav>

@@ -10,15 +10,24 @@ export default function Contact() {
     message: "",
   });
 
+  const phoneNumber = "+918789787472";
+  const emailAddress = "asifbinsabir611@gmail.com";
+
+  // Function to handle clicking to call the phone number
+  const handleClickToCall = () => {
+    window.open(`tel:${phoneNumber}`);
+  };
+
+  // Function to handle input changes in the form
   let handleInputChange = (event) => {
     setFormData((currData) => {
       return { ...currData, [event.target.name]: event.target.value };
     });
   };
 
-  let handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(FormData);
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setFormData({
       fullName: "",
       emailAddress: "",
@@ -36,21 +45,20 @@ export default function Contact() {
         <div className={style.leftSide}>
           <div className={style.icons}>
             <i className="fa-solid fa-phone"></i>
-            <div>
+            <div onClick={handleClickToCall}>
               <a href="#">+918789787472</a>
             </div>
           </div>
-
           <div className={style.icons}>
             <i className="fa-solid fa-envelope"></i>
             <div>
-              <a href="#">asifbinsabir611@gmail.com</a>
+              <a href={`mailto:${emailAddress}`}>asifbinsabir611@gmail.com</a>
             </div>
           </div>
           <div className={style.icons}>
             <i className="fa-solid fa-location-arrow"></i>
             <div>
-              <a href="#">Bihar, India</a>
+              <a href="#contacts">Bihar, India</a>
             </div>
           </div>
         </div>

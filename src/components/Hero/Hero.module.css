@@ -1,8 +1,6 @@
 @import "../../vars.css";
 
 .Hero {
-  /* position: relative;
-  top: 80px; */
   height: 100vh;
   background-color: var(--color-secondary);
   display: flex;
@@ -63,6 +61,7 @@
 .imgSection img {
   width: 80%;
   border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
 
 .socialIcons {
