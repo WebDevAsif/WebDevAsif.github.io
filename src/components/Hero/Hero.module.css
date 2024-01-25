@@ -1,0 +1,184 @@
+@import "../../vars.css";
+
+.Hero {
+  /* position: relative;
+  top: 80px; */
+  height: 100vh;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainSection {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftSection {
+  flex-basis: 50%;
+  padding: 40px 20px;
+  color: var(--color-text);
+}
+
+.greeting {
+  color: var(--color-light);
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.nameTitle {
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.profession {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.profession > span {
+  color: var(--color-light);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 20px;
+}
+
+.description span {
+  color: var(--color-light);
+  opacity: 1;
+}
+.rightSection {
+  flex-basis: 40%;
+  text-align: center;
+}
+
+.imgSection img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.socialIcons {
+  font-size: 25px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  color: var(--color-text);
+  opacity: 0.7;
+  margin-right: 15px;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialIcons a:hover {
+  color: var(--color-light);
+  transform: scale(1.1);
+}
+
+.download {
+  height: 60px;
+  width: 200px;
+  background-color: var(--color-light);
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+}
+
+.download a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 20px;
+  text-align: center;
+}
+/* =========================Media Queries================= */
+@media only screen and (max-width: 600px) {
+  .Hero {
+    height: auto;
+  }
+  .mainSection {
+    flex-direction: column-reverse;
+    margin-top: 7rem;
+  }
+  .description {
+    padding: 20px;
+  }
+  .leftSection {
+    flex-basis: auto;
+    text-align: center;
+  }
+  .rightSection {
+    flex-basis: auto;
+  }
+  .imgSection img {
+    width: 60%;
+  }
+  .greeting,
+  .profession {
+    font-size: 1.6rem;
+  }
+  .nameTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .Hero {
+    height: auto;
+  }
+  .mainSection {
+    flex-direction: column-reverse;
+    margin-top: 7rem;
+  }
+  .description {
+    padding: 30px;
+  }
+  .leftSection {
+    flex-basis: auto;
+    text-align: center;
+  }
+  .rightSection {
+    flex-basis: auto;
+  }
+  .imgSection img {
+    width: 65%;
+  }
+  .greeting,
+  .profession {
+    font-size: 1.6rem;
+  }
+  .nameTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Hero {
+    height: auto;
+  }
+  .mainSection {
+    margin-top: 8rem;
+  }
+  .greeting,
+  .profession {
+    font-size: 1.6rem;
+  }
+  .nameTitle {
+    font-size: 2.5rem;
+  }
+  .imgSection img {
+    width: 100%;
+  }
+}

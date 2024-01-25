@@ -1,0 +1,13 @@
+@import "../../vars.css";
+
+.copyright {
+  background-color: var(--color-primary);
+  height: 60px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright > div {
+  flex-basis: 80%;
+}

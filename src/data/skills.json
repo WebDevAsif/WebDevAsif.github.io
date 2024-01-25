@@ -1,0 +1,44 @@
+[
+    {
+      "title": "HTML",
+      "imageSrc": "html.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "css.png"
+    },
+    {
+      "title": "JavaScript",
+      "imageSrc": "JavaScripts.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "react.png"
+    },
+    {
+      "title": "Node",
+      "imageSrc": "node.png"
+    },
+    {
+      "title": "GraphQL",
+      "imageSrc": "graphql.png"
+    },
+    {
+      "title": "MongoDB",
+      "imageSrc": "mongodb.png"
+    },
+    {
+      "title": "Figma",
+      "imageSrc": "figma.png"
+    },
+    {
+      "title": "Github",
+      "imageSrc": "github.png"
+    },
+    {
+      "title": "Git",
+      "imageSrc": "git.png"
+    }
+    
+  ]
+  
