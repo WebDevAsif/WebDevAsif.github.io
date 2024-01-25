@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
           <div className={style.downlodBtn}>
             <button className={style.download}>
-              <a href="./assets/Md-Asif-Resume.pdf" download>
+              <a href="../assets/Md-Asif-Resume.pdf" download>
                 Download CV
               </a>
             </button>
