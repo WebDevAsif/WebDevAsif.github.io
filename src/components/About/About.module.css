@@ -55,6 +55,7 @@
 .image {
   width: 360px;
   border-radius: 20px;
+  outline: 2px solid var(--color-text);
 }
 /* ==================================== */
 .biography {

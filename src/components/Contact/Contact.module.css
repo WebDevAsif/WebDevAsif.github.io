@@ -1,7 +1,7 @@
 @import "../../vars.css";
 
-.contact {
-  height: 90vh;
+.contactSection {
+  /* height: 90vh; */
   color: var(--color-text);
   background-color: var(--color-secondary);
   padding: 120px;
@@ -9,14 +9,13 @@
   flex-direction: column;
 }
 
-.contact h2 {
+.contactTitle {
   text-align: center;
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 5px;
 }
-
-.contact hr {
+.seperator {
   width: 10rem;
   text-align: center;
   margin: 0 auto;
@@ -24,51 +23,59 @@
   color: var(--color-light);
 }
 
-.contactSection {
+.content {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 40px;
 }
 
-.leftSide {
-  flex-basis: 40%;
-}
-.leftSide div {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 20px;
-}
-
-.icons {
-  margin: 0 15px 15px 0;
-}
-
-.icons i {
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.icons div a {
-  text-decoration: none;
-  color: var(--color-text);
-}
-
-.rightSide {
+.infoContainer {
   flex-basis: 50%;
 }
-.rightSide form {
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--color-light);
+  padding: 10px;
+  border-radius: 50px;
+  margin: 0 auto 20px;
+  max-width: 70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.contactInfo:hover {
+  outline: 2px solid var(--color-text);
+}
+.contactInfo i {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: var(--color-text);
+  margin-right: 10px;
+}
+
+.contactFormContainer {
+  flex-basis: 50%;
+}
+.contactForm {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.rightSide form input {
+.formInput {
   height: 40px;
   border-radius: 50px;
   background: #43366a;
@@ -76,23 +83,25 @@
   border: none;
   text-align: start;
   padding: 15px 30px;
+  outline: 1px solid var(--color-text);
 }
 
-.rightSide form input::placeholder {
+.formInput::placeholder {
   text-align: start;
   color: var(--color-text);
+  opacity: 0.6;
 }
 
-.rightSide form .inline {
+.contactForm .inlineInput {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.rightSide form .phoneNumber {
+.contactFormContainer .contactForm .phoneNumber {
   width: 49%;
 }
-.rightSide form .subject {
+.contactFormContainer .contactForm .subject {
   width: 49%;
 }
 
@@ -102,7 +111,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.rightSide form .message {
+.contactFormContainer .contactForm .message {
   height: 150px;
   border-radius: 20px;
   background-color: #43366a;
@@ -110,65 +119,91 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 15px 30px;
   border: none;
   outline: none;
+  outline: 1px solid var(--color-text);
 }
 .message::placeholder {
   color: var(--color-text);
+  opacity: 0.6;
 }
 
-.rightSide form button {
+.formSubmitBtn {
   width: 200px;
   height: 40px;
   border-radius: 50px;
   background-color: var(--color-light);
-  color: var(--color-dark);
+  color: var(--color-text);
   border: none;
-  outline: none;
+  outline: 2px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
   padding: 5px 10px;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 500;
   margin: 0 auto;
 }
 
+.formSubmitBtn:hover {
+  outline: 2px solid var(--color-text);
+}
+
+/* ==========================Media Queries========================== */
+
 @media only screen and (max-width: 600px) {
-  .contact {
+  .contactSection {
     height: auto;
     padding: 120px 0 60px;
   }
-  .contactSection {
+  .content {
     flex-wrap: wrap;
   }
-  .rightSide {
+  .contactFormContainer {
     flex-basis: auto;
     margin: 25px 15px 0;
+  }
+  .contactInfo {
+    max-width: 100%;
+  }
+  .contacLink {
+    margin-right: 10px;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  .contact {
+  .contactSection {
     height: auto;
     padding: 120px 0 60px;
   }
-  .contactSection {
+  .content {
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .rightSide {
+  .infoContainer {
+    flex-basis: auto;
+  }
+  .contactFormContainer {
     flex-basis: auto;
     margin: 25px 15px 0;
+  }
+  .contactInfo {
+    max-width: 100%;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .contact {
+  .contactSection {
     height: auto;
     padding: 120px 0 60px;
   }
-  .contactSection {
+  .content {
     margin: 40px 40px 0;
   }
-
-  .rightSide {
+  .infoContainer {
+    flex-basis: auto;
+  }
+  .contactFormContainer {
     flex-basis: auto;
     margin: 25px 15px 0;
+  }
+  .contactInfo {
+    max-width: 100%;
   }
 }

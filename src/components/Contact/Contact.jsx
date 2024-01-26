@@ -13,11 +13,6 @@ export default function Contact() {
   const phoneNumber = "+918789787472";
   const emailAddress = "asifbinsabir611@gmail.com";
 
-  // Function to handle clicking to call the phone number
-  const handleClickToCall = () => {
-    window.open(`tel:${phoneNumber}`);
-  };
-
   // Function to handle input changes in the form
   let handleInputChange = (event) => {
     setFormData((currData) => {
@@ -38,38 +33,45 @@ export default function Contact() {
   };
 
   return (
-    <section className={style.contact} id="contacts">
-      <h2>Contact</h2>
-      <hr />
-      <div className={style.contactSection}>
-        <div className={style.leftSide}>
-          <div className={style.icons}>
+    <section className={style.contactSection} id="contacts">
+      <h2 className={style.contactTitle}>Contact</h2>
+      <hr className={style.seperator} />
+      <div className={style.content}>
+        <div className={style.infoContainer}>
+          <div className={style.contactInfo}>
             <i className="fa-solid fa-phone"></i>
-            <div onClick={handleClickToCall}>
-              <a href="#">+918789787472</a>
+            <div>
+              <a href={`tel:${phoneNumber}`} rel="noopener noreferrer" target="_blank" className={style.contactLink}>
+                +918789787472
+              </a>
             </div>
           </div>
-          <div className={style.icons}>
+          <div className={style.contactInfo}>
             <i className="fa-solid fa-envelope"></i>
             <div>
-              <a href={`mailto:${emailAddress}`}>asifbinsabir611@gmail.com</a>
+              <a href={`mailto:${emailAddress}`} className={style.contactLink}>
+                asifbinsabir611@gmail.com
+              </a>
             </div>
           </div>
-          <div className={style.icons}>
+          <div className={style.contactInfo}>
             <i className="fa-solid fa-location-arrow"></i>
             <div>
-              <a href="#contacts">Bihar, India</a>
+              <a href="#contacts" className={style.contactLink}>
+                Bihar, India
+              </a>
             </div>
           </div>
         </div>
-        <div className={style.rightSide}>
-          <form action="#" onSubmit={handleSubmit}>
+        <div className={style.contactFormContainer}>
+          <form action="#" onSubmit={handleSubmit} className={style.contactForm}>
             <input
               type="text"
               placeholder="Full Name"
               value={FormData.fullName}
               onChange={handleInputChange}
               name="fullName"
+              className={style.formInput}
               required
             />
             <input
@@ -78,38 +80,41 @@ export default function Contact() {
               value={FormData.emailAddress}
               onChange={handleInputChange}
               name="emailAddress"
+              className={style.formInput}
               required
             />
-            <div className={style.inline}>
+            <div className={style.inlineInput}>
               <input
-                className={style.phoneNumber}
                 type="number"
                 placeholder="Phone Number"
                 value={FormData.phoneNumber}
                 onChange={handleInputChange}
                 name="phoneNumber"
+                className={`${style.formInput} ${style.phoneNumber}`}
                 required
               />
               <input
-                className={style.subject}
                 type="text"
                 placeholder="Subject"
                 value={FormData.subject}
                 onChange={handleInputChange}
                 name="subject"
+                className={`${style.formInput} ${style.subject}`}
                 required
               />
             </div>
             <textarea
-              className={style.message}
               type="text"
               placeholder="Your Message"
               value={FormData.message}
               onChange={handleInputChange}
               name="message"
+              className={`${style.formInput} ${style.message}`}
               required
             />
-            <button type="submit">Submit</button>
+            <button type="submit" className={style.formSubmitBtn}>
+              Submit
+            </button>
           </form>
         </div>
       </div>
