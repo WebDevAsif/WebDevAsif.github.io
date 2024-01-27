@@ -12,6 +12,23 @@ export default function Contact() {
 
   const phoneNumber = "+918789787472";
   const emailAddress = "asifbinsabir611@gmail.com";
+  const address = "Bihar, India";
+
+  const handleClickToCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+  const handleClickToMail = () => {
+    window.location.href = `mailto:${emailAddress}`;
+  };
+  const handleClickToMap = () => {
+    const latitude = 25.18953;
+    const longitude = 85.520036;
+
+    // const geoUri = `geo:${latitude},${longitude}`;
+    const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+
+    window.open(mapsUrl, "_blank");
+  };
 
   // Function to handle input changes in the form
   let handleInputChange = (event) => {
@@ -38,29 +55,17 @@ export default function Contact() {
       <hr className={style.seperator} />
       <div className={style.content}>
         <div className={style.infoContainer}>
-          <div className={style.contactInfo}>
+          <div onClick={handleClickToCall} className={style.contactInfo}>
             <i className="fa-solid fa-phone"></i>
-            <div>
-              <a href={`tel:${phoneNumber}`} rel="noopener noreferrer" target="_blank" className={style.contactLink}>
-                +918789787472
-              </a>
-            </div>
+            <div>{phoneNumber}</div>
           </div>
-          <div className={style.contactInfo}>
+          <div onClick={handleClickToMail} className={style.contactInfo}>
             <i className="fa-solid fa-envelope"></i>
-            <div>
-              <a href={`mailto:${emailAddress}`} className={style.contactLink}>
-                asifbinsabir611@gmail.com
-              </a>
-            </div>
+            <div>{emailAddress}</div>
           </div>
-          <div className={style.contactInfo}>
+          <div onClick={handleClickToMap} className={style.contactInfo}>
             <i className="fa-solid fa-location-arrow"></i>
-            <div>
-              <a href="#contacts" className={style.contactLink}>
-                Bihar, India
-              </a>
-            </div>
+            <div>{address}</div>
           </div>
         </div>
         <div className={style.contactFormContainer}>

@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className={style.navbar}>
       <div className={style.navSection}>
         <div className={style.logoSection}>
-          <a href="/" className={style.logoImage}>
+          <a href="/">
             <img src={getImageUrl("20240120_181410.png")} alt="logo" className={style.logoImage} />
           </a>
         </div>

@@ -62,6 +62,16 @@
   width: 80%;
   border-radius: 50%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  animation: bounceAnimation 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes bounceAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); /* Adjust the value to control the bounce height */
+  }
 }
 
 .socialIcons {
