@@ -2,14 +2,13 @@ import style from "./Hero.module.css";
 import getImageUrl from "../../utils";
 
 export default function Hero() {
-  const googleDriveResumeLink = "https://drive.google.com/file/d/1HUp-DMDRe7O8lxgCoLMJyOnUcrP2Dfkg/view?usp=drive_link";
   return (
-    <div className={style.Hero} id="home">
-      <div className={style.mainSection}>
-        <div className={style.leftSection}>
-          <div className={style.title}>
+    <section className={style.heroSection} id="home">
+      <div className={style.mainContainer}>
+        <div className={style.leftContent}>
+          <div className={style.titleContainer}>
             <p className={style.greeting}>Hi, My name is</p>
-            <p className={style.nameTitle}>Md Asif</p>
+            <h1 className={style.nameTitle}>Md Asif</h1>
             <p className={style.profession}>
               And I'm a <span>Frontend Developer</span>
             </p>
@@ -38,20 +37,18 @@ export default function Hero() {
               <i className="fa-brands fa-facebook"></i>
             </a>
           </div>
-          <div className={style.downlodBtn}>
-            <button className={style.download}>
-              <a href={googleDriveResumeLink} target="_blank" rel="noopener noreferrer" download="Md-Asif-Resume.pdf">
-                Download CV
-              </a>
-            </button>
+          <div className={style.downloadButton}>
+            <a href={getImageUrl("Md-Asif-Resume.pdf")} download="Md-Asif-Resume.pdf">
+              <button className={style.downloadLink}>Download CV</button>
+            </a>
           </div>
         </div>
-        <div className={style.rightSection}>
-          <div className={style.imgSection}>
+        <div className={style.rightContent}>
+          <div className={style.imageContainer}>
             <img src={getImageUrl("portfolio.png")} alt="hero-img" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
