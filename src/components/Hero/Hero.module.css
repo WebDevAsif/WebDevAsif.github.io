@@ -79,15 +79,14 @@
   height: 60px;
   width: 180px;
   background-color: var(--color-light);
-  color: var(--color-primary);
+  color: var(--color-text);
   font-weight: 500;
   padding: 10px 10px;
-  border-radius: 30px;
+  border-radius: 20px;
   font-size: 24px;
   outline: 2px solid var(--color-text);
   border: none;
   margin-top: 10px;
-  /* box-shadow: 4px 4px 8px rgba(160, 89, 208, 0.8); */
   transition: transform 0.3s ease-in-out;
 }
 
