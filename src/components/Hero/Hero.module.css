@@ -77,22 +77,22 @@
 
 .downloadLink {
   height: 60px;
-  width: 200px;
+  width: 180px;
   background-color: var(--color-light);
-  color: var(--color-text);
+  color: var(--color-primary);
   font-weight: 500;
-  padding: 10px 30px;
-  border-radius: 50px;
-  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-size: 24px;
   outline: 2px solid var(--color-text);
   border: none;
   margin-top: 10px;
-  box-shadow: 4px 4px 8px rgba(160, 89, 208, 0.8);
+  /* box-shadow: 4px 4px 8px rgba(160, 89, 208, 0.8); */
   transition: transform 0.3s ease-in-out;
 }
 
 .downloadLink:hover {
-  transform: translateY(2px);
+  transform: translateY(-2px);
 }
 
 .rightContent {
@@ -144,9 +144,6 @@
   }
   .nameTitle {
     font-size: 2.5rem;
-  }
-  .downloadLink {
-    font-size: 20px;
   }
 }
 

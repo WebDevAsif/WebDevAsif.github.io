@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
           <div className={style.downloadButton}>
             <a href={getImageUrl("Md-Asif-Resume.pdf")} download="Md-Asif-Resume.pdf">
-              <button className={style.downloadLink}>Download CV</button>
+              <button className={style.downloadLink}>Resume</button>
             </a>
           </div>
         </div>
