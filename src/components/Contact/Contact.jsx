@@ -55,18 +55,18 @@ export default function Contact() {
       <hr className={style.seperator} />
       <div className={style.content}>
         <div className={style.infoContainer}>
-          <div onClick={handleClickToCall} className={style.contactInfo}>
+          <button onClick={handleClickToCall} className={style.contactInfo}>
             <i className="fa-solid fa-phone"></i>
             <div>{phoneNumber}</div>
-          </div>
-          <div onClick={handleClickToMail} className={style.contactInfo}>
+          </button>
+          <button onClick={handleClickToMail} className={style.contactInfo}>
             <i className="fa-solid fa-envelope"></i>
             <div>{emailAddress}</div>
-          </div>
-          <div onClick={handleClickToMap} className={style.contactInfo}>
+          </button>
+          <button onClick={handleClickToMap} className={style.contactInfo}>
             <i className="fa-solid fa-location-arrow"></i>
             <div>{address}</div>
-          </div>
+          </button>
         </div>
         <div className={style.contactFormContainer}>
           <form action="#" onSubmit={handleSubmit} className={style.contactForm}>
