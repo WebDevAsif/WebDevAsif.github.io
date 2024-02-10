@@ -1,6 +1,6 @@
 @import "../../vars.css";
 
-.skills {
+.skillsSection {
   height: 100%;
   color: var(--color-text);
   background-color: var(--color-primary);
@@ -12,13 +12,13 @@
   color: var(--color-light);
 }
 
-.title h2 {
+.sectionTitle {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.title hr {
+.sectionDivider {
   width: 8rem;
   text-align: center;
   margin: 0 auto;
@@ -26,63 +26,58 @@
   color: var(--color-light);
 }
 
-/* ========================Skills Section================== */
-
-.skillsDepartment {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 80px;
-}
-.skillsSection {
+.skillList {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
-  /* margin-bottom: 60px; */
+  margin-top: 80px;
+  gap: 20px;
 }
 
-.skillsImage {
+.skillItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   background: var(--color-text);
   color: var(--color-dark);
-  padding: 45px;
+  padding: 30px;
   border-radius: 20px;
   margin-bottom: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-
   transition: transform 0.3s ease-in-out;
 }
 
-.skillsImage:hover {
+.skillItem:hover {
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.7);
   transform: translateY(-10px);
 }
 
-.skillsImage img {
+.skillImage {
   margin-bottom: 10px;
   width: 75px;
   height: 75px;
 }
-/* =========================================== */
+/* ======================= Media Queries ===================== */
+
 @media only screen and (max-width: 600px) {
-  .skills {
+  .skillsSection {
     height: auto;
     padding: 120px 10px 120px;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  .skills {
+  .skillsSection {
     height: auto;
     padding: 120px 20px 120px;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .skills {
+  .skillsSection {
     height: auto;
-    /* padding: 120px 10px 120px; */
   }
 }

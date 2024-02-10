@@ -1,41 +1,44 @@
 import getImageUrl from "../../utils";
-import style from "../About/About.module.css";
+import styles from "../About/About.module.css";
 
 export default function About() {
   return (
-    <div className={style.about} id="about">
-      <div className={style.aboutSection}>
-        <div className={style.headingSection}>
-          <h2 className={style.heading}>
-            About <span>Me</span>
+    <section className={styles.aboutSection} id="about">
+      <div className={styles.contentWrapper}>
+        <div className={styles.heading}>
+          <h2 className={styles.sectionTitle}>
+            About <span className={styles.highlight}>Me</span>
           </h2>
-          <hr />
+          <hr className={styles.sectionDivider} />
         </div>
-        <div className={style.detailSection}>
-          <div className={style.imageSection}>
-            <img src={getImageUrl("picsart.jpg")} alt="userImage" className={style.image} />
+        <div className={styles.details}>
+          <div className={styles.imageContainer}>
+            <img src={getImageUrl("aboutImage.jpg")} alt="Portrait of the person" className={styles.profileImage} />
           </div>
-          <div className={style.descSection}>
-            <div className={style.biography}>
-              <img src={getImageUrl("apna college.png")} alt="apna college" />
-              <div className={style.zone}>
-                <p>Full-Stack Web Development</p>
-                <p>2023 - Present</p>
-                <p>Apna College</p>
+          <div className={styles.biographyContainer}>
+            <div className={styles.biography}>
+              <img src={getImageUrl("apna college.png")} alt="Apna College Logo" className={styles.universityLogo} />
+              <div className={styles.biographyText}>
+                <h3 className={styles.degree}>Full-Stack Web Development</h3>
+                <p className={styles.duration}>2023 - Present</p>
+                <p className={styles.university}>Studying at Apna College</p>
               </div>
             </div>
-            <div className={style.biography}>
-              <img src={getImageUrl("patliputra.png")} alt="patliputra" />
-              <div className={style.zone}>
-                <p>Bachelor of Commerce</p>
-                <p>2018 - 2021</p>
-                <p>Patliputra University, Patna</p>
+            <div className={styles.biography}>
+              <img
+                src={getImageUrl("patliputra.png")}
+                alt="Patliputra University Logo"
+                className={styles.universityLogo}
+              />
+              <div className={styles.biographyText}>
+                <h3 className={styles.degree}>Bachelor of Commerce</h3>
+                <p className={styles.duration}>2015 - 2028</p>
+                <p className={styles.university}>Graduated from Patliputra University, Patna</p>
               </div>
             </div>
-            {/* <div className={style.biography}></div> */}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

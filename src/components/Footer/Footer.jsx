@@ -2,12 +2,10 @@ import style from "../Footer/Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={style.copyright}>
-      <div>
-        <div className={style.content}>
-          <p>&copy; Copyright & &reg; Registered : 2024 | All Rights Reserved by Asif Bin Sabir.</p>
-        </div>
+    <footer className={style.footer}>
+      <div className={style.footerContent}>
+        <p className={style.footerText}>&copy; 2024 Asif Bin Sabir. All rights reserved.</p>
       </div>
-    </div>
+    </footer>
   );
 }

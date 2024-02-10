@@ -40,7 +40,9 @@
 
 .iconSection {
   display: none;
+  cursor: pointer;
 }
+
 .navItems {
   display: flex;
   align-items: center;
@@ -110,7 +112,8 @@
 .navbarContact:hover {
   background-color: var(--color-light);
 }
-/* =================================================Media Queries==================================== */
+
+/* =====================Media Queries=================== */
 @media only screen and (max-width: 600px) {
   .navSection > div {
     margin-right: 4rem;
@@ -180,6 +183,7 @@
   .menuOpen {
     display: block;
     z-index: 1;
+    cursor: pointer;
   }
   .iconSection {
     display: block;
