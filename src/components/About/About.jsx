@@ -20,8 +20,8 @@ export default function About() {
               <img src={getImageUrl("apna college.png")} alt="Apna College Logo" className={styles.universityLogo} />
               <div className={styles.biographyText}>
                 <h3 className={styles.degree}>Full-Stack Web Development</h3>
-                <p className={styles.duration}>2023 - Present</p>
-                <p className={styles.university}>Studying at Apna College</p>
+                <p className={styles.duration}>2023 - 2024</p>
+                <p className={styles.university}>Apna College</p>
               </div>
             </div>
             <div className={styles.biography}>
@@ -32,8 +32,8 @@ export default function About() {
               />
               <div className={styles.biographyText}>
                 <h3 className={styles.degree}>Bachelor of Commerce</h3>
-                <p className={styles.duration}>2015 - 2028</p>
-                <p className={styles.university}>Graduated from Patliputra University, Patna</p>
+                <p className={styles.duration}>2018 - 2021</p>
+                <p className={styles.university}>Patliputra University, Patna</p>
               </div>
             </div>
           </div>
