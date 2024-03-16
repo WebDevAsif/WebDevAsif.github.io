@@ -10,6 +10,8 @@ Welcome to my Personal Portfolio Website! This project showcases my skills, proj
 - **Experience:** Provides an overview of my professional experience, education, and certifications.
 - **Contact Form:** Includes a contact form for visitors to reach out to me directly.
 
+  ![Portfolio Preview](./Screenshot.png)
+
 ## Technologies Used
 
 - React
