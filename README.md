@@ -23,4 +23,4 @@ Check out the live demo of my portfolio [here](https://webdevasif.github.io/).
 
 ## Feedback
 
-I welcome any feedback or suggestions to improve my portfolio website. Please feel free to reach out to me through email at [asifbinsabir611@gmail.com].
+I welcome any feedback or suggestions to improve my portfolio website. Please feel free to reach out to me through email at asifbinsabir611@gmail.com .
