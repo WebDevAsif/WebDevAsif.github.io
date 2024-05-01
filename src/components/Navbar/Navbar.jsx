@@ -20,12 +20,20 @@ export default function Navbar() {
       <div className={style.navSection}>
         <div className={style.logoSection}>
           <a href="/">
-            <img src={getImageUrl("new_logo.png")} alt="logo" className={style.logoImage} />
+            <img
+              src={getImageUrl("new_logo.png")}
+              alt="logo"
+              className={style.logoImage}
+            />
           </a>
         </div>
 
         <div onClick={handleMenuToggle} className={style.iconSection}>
-          {menuOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
+          {menuOpen ? (
+            <i className="fa-solid fa-xmark"></i>
+          ) : (
+            <i className="fa-solid fa-bars"></i>
+          )}
         </div>
 
         <nav className={`${style.navListSection} ${menuOpen && style.menuOpen}`}>

@@ -15,11 +15,13 @@ export default function Hero() {
               And I'm a <span>Frontend Developer</span>
             </p>
             <p className={style.description}>
-              Step into the digital realm curated by <span>Md Asif</span>, where creativity meets cutting-edge
-              technology. I'm a frontend developer with a passion for crafting seamless and engaging user interfaces.
-              Armed with HTML, CSS, and JavaScript, I specialize in harnessing the power of React to bring dynamic and
-              interactive elements to life. Join me as we explore the art of frontend development and create modern,
-              user-centric websites that leave a lasting impression.
+              Step into the digital realm curated by <span>Md Asif</span>, where
+              creativity meets cutting-edge technology. I'm a frontend developer with a
+              passion for crafting seamless and engaging user interfaces. Armed with HTML,
+              CSS, and JavaScript, I specialize in harnessing the power of React to bring
+              dynamic and interactive elements to life. Join me as we explore the art of
+              frontend development and create modern, user-centric websites that leave a
+              lasting impression.
             </p>
           </div>
           <div className={style.socialIcons}>
