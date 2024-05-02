@@ -1,7 +1,8 @@
 @import "../../vars.css";
 
 .skillsSection {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   color: var(--color-text);
   background-color: var(--color-primary);
   padding: 120px;

@@ -7,12 +7,12 @@ export default function Hero() {
       <div className={style.mainContainer}>
         <div className={style.leftContent}>
           <div className={style.titleContainer}>
-            <p className={style.greeting}>Hi, My name is</p>
+            {/* <p className={style.greeting}>Hi, My name is</p> */}
             <h1 className={style.nameTitle}>
               <span className={style.content}>Md Asif</span>
             </h1>
             <p className={style.profession}>
-              And I'm a <span>Frontend Developer</span>
+              <span>Frontend Developer</span>
             </p>
             <p className={style.description}>
               Step into the digital realm curated by <span>Md Asif</span>, where

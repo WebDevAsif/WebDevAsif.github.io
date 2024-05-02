@@ -47,7 +47,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className={style.navLink}>
-              <a href="#services">Services</a>
+              <a href="#projects">Projects</a>
             </li>
             <li className={style.navLink}>
               <a href="#skills" className={style.skills}>

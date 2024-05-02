@@ -1,15 +1,15 @@
 @import "../../vars.css";
 
-.service {
+.projects {
   background-color: var(--color-secondary);
   color: var(--color-text);
-  height: 100vh;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.serviceSection {
+.projectsSection {
   padding-top: 60px;
   text-align: center;
 }
@@ -36,14 +36,16 @@ hr {
   color: var(--color-light);
 }
 
-.projectSection {
+.projectCardContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
+  outline: none;
+  border: none;
 }
 
-.cardSection {
+.projectCard {
   margin-top: 75px;
   background-color: var(--color-text);
   color: var(--color-dark);
@@ -54,14 +56,18 @@ hr {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
   transition: box-shadow 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  border: none;
+  outline: none;
 }
 
-.cardSection:hover {
+.projectCard:hover {
   box-shadow: 0 24px 20px rgba(0, 0, 0, 0.7);
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .cardImage img {
   width: 100%;
+  height: auto;
   max-height: 160px;
 }
 
@@ -78,12 +84,36 @@ hr {
   text-align: center;
   margin: 20px;
 }
+
+.projectBtn {
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  background-color: #212121;
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 4px 4px 8px 2px black;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.links a {
+  text-decoration: none;
+  color: var(--color-premium);
+  font-weight: 800;
+  cursor: pointer;
+}
 /* ============================= */
 @media only screen and (max-width: 600px) {
-  .service {
+  .projects {
     height: auto;
   }
-  .projectSection {
+  .projectCardContainer {
     flex-wrap: wrap;
     margin: 75px 0;
   }
@@ -93,10 +123,10 @@ hr {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  .service {
+  .projects {
     height: auto;
   }
-  .projectSection {
+  .projectCardContainer {
     flex-wrap: wrap;
     margin: 75px 0;
   }
@@ -106,10 +136,10 @@ hr {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .service {
+  .projects {
     height: auto;
   }
-  .projectSection {
+  .projectCardContainer {
     flex-wrap: wrap;
     margin: 75px 0;
   }
