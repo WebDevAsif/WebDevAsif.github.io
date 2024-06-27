@@ -37,7 +37,7 @@ export default function Hero() {
               <i className="fa-brands fa-instagram"></i>
             </a>
 
-            <a href="https://www.facebook.com/ibnsabir611">
+            <a href="/">
               <i className="fa-brands fa-facebook"></i>
             </a>
           </div>

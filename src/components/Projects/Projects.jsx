@@ -22,14 +22,14 @@ export default function Service() {
         </div>
         <div className={style.projectCardContainer}>
           {projects.map((project, index) => (
-            <div className={style.projectCard}>
+            <div className={style.projectCard} key={index}>
               <div className={style.card}>
                 <div className={style.cardImage}>
                   <img src={getImageUrl(project.image)} alt="projectImage" />
                 </div>
                 <div className={style.cardTitle}>
                   <h1>{project.title}</h1>
-                  <p>
+                  <h4>
                     {expandProject === index
                       ? project.description
                       : `${project.description.slice(0, maxLength)}...`}
@@ -48,7 +48,7 @@ export default function Service() {
                     >
                       {expandProject === index ? "See less" : "See more"}
                     </button>
-                  </p>
+                  </h4>
                 </div>
               </div>
             </div>

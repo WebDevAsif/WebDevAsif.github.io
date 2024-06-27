@@ -1,35 +1,39 @@
 [
     {
       "title": "HTML",
-      "imageSrc": "html.png"
+      "imageSrc": "html_new.png"
     },
     {
       "title": "CSS",
-      "imageSrc": "css.png"
+      "imageSrc": "css_new.png"
+    },
+    {
+      "title": "Bootstrap",
+      "imageSrc": "bootstrap.png"
     },
     {
       "title": "JavaScript",
-      "imageSrc": "JavaScripts.png"
+      "imageSrc": "javascript_new.png"
     },
     {
       "title": "React",
-      "imageSrc": "react.png"
+      "imageSrc": "react_new.png"
     },
     {
       "title": "Node",
-      "imageSrc": "node.png"
+      "imageSrc": "node_new.png"
     },
     {
-      "title": "GraphQL",
-      "imageSrc": "graphql.png"
+      "title": "SQL",
+      "imageSrc": "sql_new.png"
     },
     {
       "title": "MongoDB",
       "imageSrc": "mongodb.png"
     },
     {
-      "title": "Figma",
-      "imageSrc": "figma.png"
+      "title": "Tailwind",
+      "imageSrc": "tailwind_new.png"
     },
     {
       "title": "Github",
@@ -38,6 +42,10 @@
     {
       "title": "Git",
       "imageSrc": "git.png"
+    },
+    {
+      "title": "Figma",
+      "imageSrc": "figma_new.png"
     }
     
   ]
