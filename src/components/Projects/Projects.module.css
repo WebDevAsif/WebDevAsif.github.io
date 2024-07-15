@@ -89,12 +89,14 @@ hr {
   padding: 10px 40px;
   border: none;
   outline: none;
-  background-color: #212121;
-  color: #fff;
+  border-radius: 14px;
+  background-color: var(--color-dark);
+  color: var(--color-text);
   font-size: 1rem;
   display: block;
   margin: 10px auto;
-  box-shadow: 4px 4px 8px 2px black;
+  box-shadow: 2px 4px 8px 2px black;
+  cursor: pointer;
 }
 .links {
   display: flex;

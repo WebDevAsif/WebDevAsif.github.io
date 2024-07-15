@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import style from "../Contact/Contact.module.css";
 
 export default function Contact() {
+  const form = useRef();
   const [FormData, setFormData] = useState({
     fullName: "",
     emailAddress: "",
@@ -10,9 +11,9 @@ export default function Contact() {
     message: "",
   });
 
-  const phoneNumber = "+918789787472";
-  const emailAddress = "asifbinsabir611@gmail.com";
-  const address = "Bihar, India";
+  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
+  const emailAddress = import.meta.env.VITE_EMAIL_ADDRESS;
+  const address = import.meta.env.VITE_ADDRESS;
 
   const handleClickToCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -37,9 +38,22 @@ export default function Contact() {
     });
   };
 
-  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Send email using EmailJS
+    emailjs
+      .sendForm("service_fl7i3v8", "template_26i8qmt", form.current, "WoEGtDgPN0FemnU1J")
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    // Clear the form
     setFormData({
       fullName: "",
       emailAddress: "",
@@ -69,7 +83,7 @@ export default function Contact() {
           </button>
         </div>
         <div className={style.contactFormContainer}>
-          <form action="#" onSubmit={handleSubmit} className={style.contactForm}>
+          <form ref={form} onSubmit={handleSubmit} className={style.contactForm}>
             <input
               type="text"
               placeholder="Full Name"
@@ -96,7 +110,6 @@ export default function Contact() {
                 onChange={handleInputChange}
                 name="phoneNumber"
                 className={`${style.formInput} ${style.phoneNumber}`}
-                required
               />
               <input
                 type="text"
@@ -105,7 +118,6 @@ export default function Contact() {
                 onChange={handleInputChange}
                 name="subject"
                 className={`${style.formInput} ${style.subject}`}
-                required
               />
             </div>
             <textarea

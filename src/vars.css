@@ -1,14 +1,9 @@
 :root {
   --color-text: #fff;
-  /* --color-primary: #0f1035; */
   --color-primary: #181d31;
-  /* --color-secondary: #030637; */
   --color-secondary: #252937;
   --color-light: #fca311;
   --color-dark: #0b2447;
-  --color-premium: #100e09;
-  --color-bg: #424769;
 
   --font-roboto: "roboto";
-  /* --font-poppins: "poppins"; */
 }

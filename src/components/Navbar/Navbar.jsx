@@ -5,7 +5,7 @@ import getImageUrl from "../../utils";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const phoneNumber = "+918789787472";
+  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
 
   const handleCallButtonClick = () => {
     window.open(`tel:${phoneNumber}`);
@@ -59,7 +59,7 @@ export default function Navbar() {
             </li>
           </ul>
           <button className={style.navbarContact} onClick={handleCallButtonClick}>
-            <p>+918789787472</p>
+            <p style={{ color: "black" }}>{phoneNumber}</p>
           </button>
         </nav>
       </div>

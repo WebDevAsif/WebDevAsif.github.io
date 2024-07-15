@@ -34,20 +34,6 @@
   flex-basis: 50%;
 }
 
-/* .contactInfo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border: none;
-  outline: none;
-  background-color: var(--color-light);
-  padding: 10px;
-  border-radius: 50px;
-  margin: 0 auto 20px;
-  max-width: 70%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-} */
-
 .contactInfo {
   display: flex;
   align-items: center;
@@ -156,6 +142,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .formSubmitBtn:hover {
   outline: 2px solid var(--color-dark);
+}
+
+button {
+  cursor: pointer;
 }
 
 /* ==========================Media Queries========================== */
