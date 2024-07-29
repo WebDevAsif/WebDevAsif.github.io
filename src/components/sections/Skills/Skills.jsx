@@ -1,6 +1,6 @@
-import style from "../Skills/Skills.module.css";
-import skills from "../../data/skills.json";
-import getImageUrl from "../../utils";
+import style from "./Skills.module.css";
+import skills from "../../../data/skills.json";
+import getImageUrl from "../../../utils";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Skills() {
@@ -14,7 +14,11 @@ export default function Skills() {
         <div className={style.skillList}>
           {skills.map((skill) => (
             <div key={uuidv4()} className={style.skillItem}>
-              <img src={getImageUrl(skill.imageSrc)} alt={skill.title} className={style.skillImage} />
+              <img
+                src={getImageUrl(skill.imageSrc)}
+                alt={skill.title}
+                className={style.skillImage}
+              />
               <p className={style.skillTitle}>{skill.title}</p>
             </div>
           ))}

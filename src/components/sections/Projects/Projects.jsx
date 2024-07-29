@@ -1,7 +1,8 @@
 import style from "./Projects.module.css";
-import getImageUrl from "../../utils";
-import projects from "../../data/project.json";
+import getImageUrl from "../../../utils";
+import projects from "../../../data/project.json";
 import { useState } from "react";
+import Button from "../../common/Button/Button";
 
 export default function Service() {
   const [expandProject, setExpandProject] = useState(null);
@@ -42,12 +43,17 @@ export default function Service() {
                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                     </div>
-                    <button
+                    {/* <button
                       onClick={() => toggleExpand(index)}
                       className={style.projectBtn}
                     >
                       {expandProject === index ? "See less" : "See more"}
-                    </button>
+                    </button> */}
+                    <Button
+                      label={expandProject === index ? "See less" : "See more"}
+                      onClick={() => toggleExpand(index)}
+                      className={style.projectBtn}
+                    />
                   </h4>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import style from "../Contact/Contact.module.css";
+import style from "./Contact.module.css";
+import Button from "../../common/Button/Button";
 
 export default function Contact() {
   const form = useRef();
@@ -69,18 +70,18 @@ export default function Contact() {
       <hr className={style.seperator} />
       <div className={style.content}>
         <div className={style.infoContainer}>
-          <button onClick={handleClickToCall} className={style.contactInfo}>
+          <Button onClick={handleClickToCall} className={style.contactInfo}>
             <i className="fa-solid fa-phone"></i>
             <div>{phoneNumber}</div>
-          </button>
-          <button onClick={handleClickToMail} className={style.contactInfo}>
+          </Button>
+          <Button onClick={handleClickToMail} className={style.contactInfo}>
             <i className="fa-solid fa-envelope"></i>
             <div>{emailAddress}</div>
-          </button>
-          <button onClick={handleClickToMap} className={style.contactInfo}>
+          </Button>
+          <Button onClick={handleClickToMap} className={style.contactInfo}>
             <i className="fa-solid fa-location-arrow"></i>
             <div>{address}</div>
-          </button>
+          </Button>
         </div>
         <div className={style.contactFormContainer}>
           <form ref={form} onSubmit={handleSubmit} className={style.contactForm}>
@@ -129,9 +130,7 @@ export default function Contact() {
               className={`${style.formInput} ${style.message}`}
               required
             />
-            <button type="submit" className={style.formSubmitBtn}>
-              Submit
-            </button>
+            <Button label={"Submit"} className={style.formSubmitBtn} />
           </form>
         </div>
       </div>

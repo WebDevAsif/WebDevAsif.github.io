@@ -1,14 +1,14 @@
 import { useState } from "react";
 import style from "../Navbar/Navbar.module.css";
-import getImageUrl from "../../utils";
+import getImageUrl from "../../../utils";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
 
-  const handleCallButtonClick = () => {
-    window.open(`tel:${phoneNumber}`);
+  const handleClickToCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   const handleMenuToggle = () => {
@@ -58,7 +58,7 @@ export default function Navbar() {
               <a href="#contacts">Contacts</a>
             </li>
           </ul>
-          <button className={style.navbarContact} onClick={handleCallButtonClick}>
+          <button className={style.navbarContact} onClick={handleClickToCall}>
             <p style={{ color: "black" }}>{phoneNumber}</p>
           </button>
         </nav>

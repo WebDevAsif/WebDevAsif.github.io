@@ -1,4 +1,4 @@
-@import "../../vars.css";
+@import "../../../vars.css";
 
 .heroSection {
   height: auto;
@@ -31,7 +31,6 @@
   font-size: 46px;
   font-weight: 600;
   margin-bottom: 6px;
-  /* color: var(--color-light); */
 }
 
 .profession {
@@ -59,45 +58,28 @@
   font-size: 25px;
   margin-top: 20px;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .socialIcons a {
   text-decoration: none;
   color: var(--color-text);
   opacity: 0.7;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   padding: 5px;
   transition: transform 0.3s ease-in-out;
   display: inline-block;
 }
 
 .socialIcons i {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
 }
 
 .socialIcons a:hover {
   color: var(--color-light);
   transform: translateY(-5px);
-}
-
-.downloadLink {
-  height: 60px;
-  width: 180px;
-  background-color: var(--color-light);
-  font-weight: 600;
-  padding: 10px 10px;
-  border-radius: 20px;
-  font-size: 24px;
-  outline: 2px solid var(--color-text);
-  border: none;
-  margin-top: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.downloadLink:hover {
-  transform: translateY(-2px);
 }
 
 .rightContent {
@@ -172,6 +154,7 @@
   }
   .imageContainer img {
     width: 65%;
+    max-width: 500px;
   }
   .greeting,
   .profession {
@@ -198,5 +181,12 @@
   }
   .imageContainer img {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .socialIcons {
+    justify-content: start;
+    gap: 1rem;
   }
 }

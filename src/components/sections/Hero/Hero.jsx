@@ -1,5 +1,6 @@
 import style from "./Hero.module.css";
-import getImageUrl from "../../utils";
+import getImageUrl from "../../../utils";
+import Button from "../../common/Button/Button";
 
 export default function Hero() {
   return (
@@ -43,13 +44,15 @@ export default function Hero() {
           </div>
           <div className={style.downloadButton}>
             <a href={getImageUrl("Md-Asif-Resume.pdf")} download="Md-Asif-Resume.pdf">
-              <button className={style.downloadLink}>Resume</button>
+              <Button label={"Resume"} className={style.resumeBtn}>
+                <i className="fa-solid fa-download"></i>
+              </Button>
             </a>
           </div>
         </div>
         <div className={style.rightContent}>
           <div className={style.imageContainer}>
-            <img src={getImageUrl("portfolio.png")} alt="hero-img" />
+            <img src={getImageUrl("heroImage.png")} alt="hero-img" />
           </div>
         </div>
       </div>

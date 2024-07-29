@@ -1,12 +1,5 @@
 [
     {
-        "title": "Portfolio Website",
-        "description": "Step into the digital realm curated by Md Asif, where creativity meets cutting-edge technology. I'm a frontend developer with a passion for crafting seamless and engaging user interfaces. Armed with HTML, CSS, and JavaScript, I specialize in harnessing the power of React to bring dynamic and interactive elements to life. Join me as we explore the art of frontend development and create modern, user-centric websites that leave a lasting impression.",
-        "image": "portfolioWebsite.png",
-        "liveLink": "https://webdevasif.github.io/",
-        "projectLink": "https://github.com/WebDevAsif/WebDevAsif.github.io"
-    },
-    {
         "title": "HomeStay",
         "description": "HomeStay is a web application that facilitates finding and booking homestays for vacations or travel stays. Users can explore homestay options, view details and photos of each listing, and securely book their stay. The platform also provides features for hosts to list their properties and manage bookings.",
         "image": "homeStay.png",
