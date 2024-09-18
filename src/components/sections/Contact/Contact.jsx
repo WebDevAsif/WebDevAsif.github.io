@@ -44,7 +44,7 @@ export default function Contact() {
 
     // Send email using EmailJS
     emailjs
-      .sendForm("service_fl7i3v8", "template_26i8qmt", form.current, "WoEGtDgPN0FemnU1J")
+      .sendForm("service_n89eg0u", "template_x5ymzb5", form.current, "jFbeBecjPqRy22XVC")
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
