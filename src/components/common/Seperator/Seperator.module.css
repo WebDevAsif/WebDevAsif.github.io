@@ -1,0 +1,7 @@
+.seperator {
+  width: 12rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 6px;
+  color: var(--color-light);
+}

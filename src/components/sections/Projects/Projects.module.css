@@ -2,7 +2,7 @@
 
 .projects {
   background-color: var(--color-secondary);
-  color: var(--color-text);
+  color: var(--color-primary-text);
   min-height: 100vh;
   height: auto;
   padding-top: 60px;
@@ -47,8 +47,8 @@ hr {
 
 .projectCard {
   margin-top: 75px;
-  background-color: var(--color-text);
-  color: var(--color-dark);
+  background-color: #fff;
+  color: var(--color-secondary-text);
   border-radius: 15px;
   overflow: hidden;
   max-width: 300px;
@@ -87,7 +87,13 @@ hr {
 
 .projectBtn {
   width: 130px;
+  margin-bottom: 15px;
 }
+
+.projectBtn:hover {
+  transform: translateY(0);
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -96,7 +102,7 @@ hr {
 }
 .links a {
   text-decoration: none;
-  color: var(--color-premium);
+  color: var(--color-secondary-text);
   font-weight: 800;
   cursor: pointer;
 }

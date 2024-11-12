@@ -2,6 +2,7 @@ import style from "./Skills.module.css";
 import skills from "../../../data/skills.json";
 import getImageUrl from "../../../utils";
 import { v4 as uuidv4 } from "uuid";
+import Seperator from "../../common/Seperator/Seperator";
 
 export default function Skills() {
   return (
@@ -9,7 +10,7 @@ export default function Skills() {
       <div className={style.container}>
         <div className={style.title}>
           <h2 className={style.sectionTitle}>Skills</h2>
-          <hr className={style.sectionDivider} />
+          <Seperator />
         </div>
         <div className={style.skillList}>
           {skills.map((skill) => (

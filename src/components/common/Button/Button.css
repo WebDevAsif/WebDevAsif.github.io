@@ -5,11 +5,12 @@
   min-width: fit-content;
   height: 50px;
   background-color: var(--color-light);
+  color: var(--color-button-text);
   padding: 10px;
   border-radius: 25px;
   font-size: 20px;
   font-weight: 500;
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--color-outline);
   border: none;
   margin-top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -19,5 +20,13 @@
 
 .btn:hover {
   transform: translateY(-2px);
-  outline-color: var(--color-dark);
+  outline-color: var(--color-primary);
+}
+
+.btn i {
+  color: var(--color-icon);
+}
+
+.btn > div {
+  letter-spacing: normal;
 }

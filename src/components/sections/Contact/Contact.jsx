@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "./Contact.module.css";
 import Button from "../../common/Button/Button";
+import Seperator from "../../common/Seperator/Seperator";
 
 export default function Contact() {
   const form = useRef();
@@ -11,6 +12,8 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+
+  const [emailSent, setEmailSent] = useState(null);
 
   const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
   const emailAddress = import.meta.env.VITE_EMAIL_ADDRESS;
@@ -42,32 +45,48 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Send email using EmailJS
-    emailjs
-      .sendForm("service_n89eg0u", "template_x5ymzb5", form.current, "jFbeBecjPqRy22XVC")
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    try {
+      // Send email using EmailJS
+      emailjs
+        .sendForm(
+          "service_n89eg0u",
+          "template_x5ymzb5",
+          form.current,
+          "jFbeBecjPqRy22XVC"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
 
-    // Clear the form
-    setFormData({
-      fullName: "",
-      emailAddress: "",
-      phoneNumber: "",
-      subject: "",
-      message: "",
-    });
+      setEmailSent(true);
+
+      // Clear the form
+      setFormData({
+        fullName: "",
+        emailAddress: "",
+        phoneNumber: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      setEmailSent(false);
+    }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => setEmailSent(null), 5000);
+    return () => clearTimeout(timer);
+  }, [emailSent]);
 
   return (
     <section className={style.contactSection} id="contacts">
       <h2 className={style.contactTitle}>Contact</h2>
-      <hr className={style.seperator} />
+      <Seperator />
       <div className={style.content}>
         <div className={style.infoContainer}>
           <Button onClick={handleClickToCall} className={style.contactInfo}>
@@ -132,6 +151,17 @@ export default function Contact() {
             />
             <Button label={"Submit"} className={style.formSubmitBtn} />
           </form>
+          {emailSent === true && (
+            <p className={style.successMessage}>
+              <i className="fa-solid fa-circle-check"></i>&nbsp;Your message was sent
+              successfully!
+            </p>
+          )}
+          {emailSent === false && (
+            <p className={style.errorMessage}>
+              There was an error sending your message. Please try again.
+            </p>
+          )}
         </div>
       </div>
     </section>

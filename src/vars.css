@@ -1,9 +1,19 @@
 :root {
-  --color-text: #fff;
+  --color-navlink: #fff;
+  --color-title: #fff;
+  --color-primary-text: #fff;
+  --color-secondary-text: #181d31;
   --color-primary: #181d31;
-  --color-secondary: #252937;
-  --color-light: #fca311;
-  --color-dark: #0b2447;
+  --color-secondary: #3d405b;
+  --color-light: #ff9f1c;
+  --color-outline: #fff;
+  --color-hamburger: #fff;
+  --color-social-icons: #fff;
+  --color-icon: #181d31;
+  --color-button-text: #181d31;
+  --color-success: rgb(0, 255, 238);
+  --color-error: red;
+  --color-linear: linear-gradient(90deg, #19376d 0%, rgba(25, 25, 190, 0) 100%);
 
   --font-roboto: "roboto";
 }

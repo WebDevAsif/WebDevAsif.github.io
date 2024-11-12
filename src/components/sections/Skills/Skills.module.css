@@ -3,14 +3,14 @@
 .skillsSection {
   height: auto;
   min-height: 100vh;
-  color: var(--color-text);
+  color: var(--color-primary-text);
   background-color: var(--color-primary);
   padding: 120px;
 }
 
 .title {
   text-align: center;
-  color: var(--color-light);
+  /* color: var(--color-light); */
 }
 
 .sectionTitle {
@@ -48,8 +48,8 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background: var(--color-text);
-  color: var(--color-dark);
+  background: #fff;
+  color: var(--color-secondary-text);
   padding: 30px;
   border-radius: 20px;
   margin-bottom: 10px;

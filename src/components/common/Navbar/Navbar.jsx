@@ -1,66 +1,81 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import style from "../Navbar/Navbar.module.css";
 import getImageUrl from "../../../utils";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
+  // Toggle the menu open/close
+  const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
-  const handleClickToCall = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
+  // Close menu if clicked outside
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (menuOpen && !event.target.closest(`.${style.navSection}`)) {
+        setMenuOpen(false);
+      }
+    },
+    [menuOpen]
+  );
 
-  const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
+  // Close menu with Escape key
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (menuOpen && event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    },
+    [menuOpen]
+  );
+
+  // Attach event listeners
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleClickOutside, handleKeyDown]);
 
   return (
     <header className={style.navbar}>
       <div className={style.navSection}>
         <div className={style.logoSection}>
           <a href="/">
-            <img
-              src={getImageUrl("new_logo.png")}
-              alt="logo"
-              className={style.logoImage}
-            />
+            <img src={getImageUrl("Logo.png")} alt="Logo" className={style.logoImage} />
           </a>
         </div>
 
-        <div onClick={handleMenuToggle} className={style.iconSection}>
-          {menuOpen ? (
-            <i className="fa-solid fa-xmark"></i>
-          ) : (
-            <i className="fa-solid fa-bars"></i>
-          )}
+        <div
+          onClick={handleMenuToggle}
+          className={style.iconSection}
+          aria-expanded={menuOpen}
+          role="button"
+          aria-label="Toggle menu"
+        >
+          <i className={`fa-solid ${menuOpen ? "fa-xmark" : "fa-bars"}`}></i>
         </div>
 
         <nav className={`${style.navListSection} ${menuOpen && style.menuOpen}`}>
-          <ul className={style.navItems} onClick={handleMenuToggle}>
+          <ul className={style.navItems}>
             <li className={style.navLink}>
               <a href="#home">Home</a>
             </li>
             <li className={style.navLink}>
-              <a href="#about" className={style.about}>
-                About
-              </a>
+              <a href="#about">About</a>
             </li>
             <li className={style.navLink}>
               <a href="#projects">Projects</a>
             </li>
             <li className={style.navLink}>
-              <a href="#skills" className={style.skills}>
-                Skills
-              </a>
+              <a href="#skills">Skills</a>
             </li>
             <li className={style.navLink}>
               <a href="#contacts">Contacts</a>
             </li>
           </ul>
-          <button className={style.navbarContact} onClick={handleClickToCall}>
-            <p style={{ color: "black" }}>{phoneNumber}</p>
-          </button>
         </nav>
       </div>
     </header>

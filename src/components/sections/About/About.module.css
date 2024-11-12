@@ -2,7 +2,7 @@
 
 .aboutSection {
   background-color: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-primary-text);
   height: auto;
   min-height: 100vh;
 }
@@ -32,7 +32,6 @@
   text-align: center;
   margin: 0 auto;
   margin-top: 6px;
-  color: var(--color-light);
 }
 
 .details {
@@ -51,12 +50,18 @@
   flex-basis: 40%;
 }
 
+.profileImage:hover {
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.7);
+  transform: translateY(-10px);
+}
+
 .profileImage {
   /* width: 360px; */
   height: 400px;
   border-radius: 20px;
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--color-outline);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out;
 }
 
 .biographyContainer {
@@ -70,12 +75,17 @@
   align-items: center;
   justify-content: start;
   padding: 10px;
-  outline: 2px solid white;
-  background-color: #19376d;
-  background: linear-gradient(90deg, #19376d 0%, rgba(25, 25, 190, 0) 100%);
+  outline: 2px solid var(--color-outline);
+  background: var(--color-linear);
   border-radius: 25px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   max-width: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.biography:hover {
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.7);
+  transform: translateY(-10px);
 }
 
 .biography:nth-child(1) {
@@ -84,7 +94,7 @@
 
 .universityLogo {
   width: 80px;
-  background-color: var(--color-text);
+  background-color: #fff;
   border-radius: 15px;
 }
 
@@ -94,7 +104,13 @@
   margin-left: 25px;
   padding: 20px 0;
   text-align: start;
-  gap: 20px;
+  gap: 10px;
+}
+
+.degree,
+.duration,
+.university {
+  color: var(--color-primary-text);
 }
 
 /* ==================Media Queries=========== */

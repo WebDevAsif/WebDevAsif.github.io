@@ -8,13 +8,9 @@ export default function Hero() {
       <div className={style.mainContainer}>
         <div className={style.leftContent}>
           <div className={style.titleContainer}>
-            {/* <p className={style.greeting}>Hi, My name is</p> */}
-            <h1 className={style.nameTitle}>
-              <span className={style.content}>Md Asif</span>
-            </h1>
-            <p className={style.profession}>
-              <span>Frontend Developer</span>
-            </p>
+            <p className={style.greeting}>Hello!</p>
+            <h1 className={style.nameTitle}>I'm&nbsp;Asif&nbsp;Bin&nbsp;Sabir</h1>
+            <p className={style.profession}>Freelance Frontend Developer</p>
             <p className={style.description}>
               Step into the digital realm curated by <span>Md Asif</span>, where
               creativity meets cutting-edge technology. I'm a frontend developer with a
@@ -26,11 +22,19 @@ export default function Hero() {
             </p>
           </div>
           <div className={style.socialIcons}>
-            <a href="https://www.linkedin.com/in/asif-developer/">
+            <a
+              href="https://www.linkedin.com/in/asif-developer/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa-brands fa-linkedin"></i>
             </a>
 
-            <a href="https://github.com/WebDevAsif">
+            <a
+              href="https://github.com/WebDevAsif"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa-brands fa-github"></i>
             </a>
 

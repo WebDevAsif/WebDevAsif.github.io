@@ -1,4 +1,5 @@
 import getImageUrl from "../../../utils";
+import Seperator from "../../common/Seperator/Seperator";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -6,10 +7,8 @@ export default function About() {
     <section className={styles.aboutSection} id="about">
       <div className={styles.contentWrapper}>
         <div className={styles.heading}>
-          <h2 className={styles.sectionTitle}>
-            About <span className={styles.highlight}>Me</span>
-          </h2>
-          <hr className={styles.sectionDivider} />
+          <h2 className={styles.sectionTitle}>About</h2>
+          <Seperator />
         </div>
         <div className={styles.details}>
           <div className={styles.imageContainer}>
@@ -28,8 +27,8 @@ export default function About() {
               />
               <div className={styles.biographyText}>
                 <h3 className={styles.degree}>Full-Stack Web Development</h3>
-                <p className={styles.duration}>2023 - 2024</p>
                 <p className={styles.university}>Apna College</p>
+                <p className={styles.duration}>2023 - 2024</p>
               </div>
             </div>
             <div className={styles.biography}>
@@ -40,8 +39,8 @@ export default function About() {
               />
               <div className={styles.biographyText}>
                 <h3 className={styles.degree}>Bachelor of Commerce</h3>
-                <p className={styles.duration}>2018 - 2021</p>
                 <p className={styles.university}>Patliputra University, Patna</p>
+                <p className={styles.duration}>2018 - 2021</p>
               </div>
             </div>
           </div>
