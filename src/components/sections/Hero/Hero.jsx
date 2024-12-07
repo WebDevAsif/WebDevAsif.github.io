@@ -9,7 +9,7 @@ export default function Hero() {
         <div className={style.leftContent}>
           <div className={style.titleContainer}>
             <p className={style.greeting}>Hello!</p>
-            <h1 className={style.nameTitle}>I'm&nbsp;Asif&nbsp;Bin&nbsp;Sabir</h1>
+            <h1 className={style.nameTitle}>I'm&nbsp;Asif</h1>
             <p className={style.profession}>Freelance Frontend Developer</p>
             <p className={style.description}>
               Step into the digital realm curated by <span>Md Asif</span>, where
