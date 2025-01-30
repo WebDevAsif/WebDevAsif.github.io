@@ -10,8 +10,8 @@ export default function Hero() {
           <div className={style.titleContainer}>
             <p className={style.greeting}>Hello!</p>
             <h1 className={style.nameTitle}>I'm&nbsp;Asif</h1>
-            <p className={style.profession}>Freelance Frontend Developer</p>
-            <p className={style.description}>
+            <p className={style.profession}>Frontend Developer</p>
+            {/* <p className={style.description}>
               Step into the digital realm curated by <span>Md Asif</span>, where
               creativity meets cutting-edge technology. I'm a frontend developer with a
               passion for crafting seamless and engaging user interfaces. Armed with HTML,
@@ -19,6 +19,15 @@ export default function Hero() {
               dynamic and interactive elements to life. Join me as we explore the art of
               frontend development and create modern, user-centric websites that leave a
               lasting impression.
+            </p> */}
+            <p className={style.description}>
+              Welcome to the digital realm curated by <span>Md Asif</span>, where
+              creativity converges with cutting-edge technology.
+              <br /> I am a passionate frontend developer dedicated to crafting seamless
+              and engaging user experiences. With expertise in HTML, CSS, JavaScript, and
+              a focus on React, I bring dynamic, interactive elements to life. Let’s
+              explore the art of frontend development together and create modern,
+              user-centric websites that leave a lasting impression.
             </p>
           </div>
           <div className={style.socialIcons}>
