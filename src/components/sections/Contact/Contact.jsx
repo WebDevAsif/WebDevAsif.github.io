@@ -57,13 +57,12 @@ export default function Contact() {
         .then(
           (result) => {
             console.log("SUCCESS!", result.text);
+            setEmailSent(true);
           },
           (error) => {
             console.log("FAILED...", error.text);
           }
         );
-
-      setEmailSent(true);
 
       // Clear the form
       setFormData({
