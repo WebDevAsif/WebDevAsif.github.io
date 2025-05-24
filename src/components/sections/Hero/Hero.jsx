@@ -11,15 +11,6 @@ export default function Hero() {
             <p className={style.greeting}>Hello!</p>
             <h1 className={style.nameTitle}>I'm&nbsp;Asif</h1>
             <p className={style.profession}>Frontend Developer</p>
-            {/* <p className={style.description}>
-              Step into the digital realm curated by <span>Md Asif</span>, where
-              creativity meets cutting-edge technology. I'm a frontend developer with a
-              passion for crafting seamless and engaging user interfaces. Armed with HTML,
-              CSS, and JavaScript, I specialize in harnessing the power of React to bring
-              dynamic and interactive elements to life. Join me as we explore the art of
-              frontend development and create modern, user-centric websites that leave a
-              lasting impression.
-            </p> */}
             <p className={style.description}>
               Welcome to the digital realm curated by <span>Md Asif</span>, where
               creativity converges with cutting-edge technology.
@@ -33,6 +24,7 @@ export default function Hero() {
           <div className={style.socialIcons}>
             <a
               href="https://www.linkedin.com/in/asif-developer/"
+              title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -41,17 +33,18 @@ export default function Hero() {
 
             <a
               href="https://github.com/WebDevAsif"
+              title="Github"
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className="fa-brands fa-github"></i>
             </a>
 
-            <a href="/">
+            <a href="/" title="Instagram">
               <i className="fa-brands fa-instagram"></i>
             </a>
 
-            <a href="/">
+            <a href="/" title="Facebook">
               <i className="fa-brands fa-facebook"></i>
             </a>
           </div>

@@ -138,6 +138,7 @@ export default function Contact() {
                 onChange={handleInputChange}
                 name="subject"
                 className={`${style.formInput} ${style.subject}`}
+                required
               />
             </div>
             <textarea
