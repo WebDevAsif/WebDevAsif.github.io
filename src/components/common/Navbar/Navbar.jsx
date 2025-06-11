@@ -44,7 +44,11 @@ export default function Navbar() {
       <div className={style.navSection}>
         <div className={style.logoSection}>
           <a href="/">
-            <img src={getImageUrl("Logo.png")} alt="Logo" className={style.logoImage} />
+            <img
+              src={getImageUrl("3D Logo.png")}
+              alt="Logo"
+              className={style.logoImage}
+            />
           </a>
         </div>
 
